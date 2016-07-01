@@ -1131,7 +1131,7 @@ if( ! $smof_data['status_opengraph'] ) {
 		echo '<meta property="og:type" content="article"/>';
 		echo sprintf( '<meta property="og:url" content="%s"/>', get_permalink() );
 		echo sprintf( '<meta property="og:site_name" content="%s"/>', get_bloginfo('name') );
-		echo sprintf( '<meta property="og:description" content="%s"/>', avada_get_content_stripped_and_excerpted( 55, $post->post_content ) );
+		echo sprintf( '<meta property="og:description" content="%s"/>', 'Vegui, la revolución de la comida saludable, con máquinas expendedoras de última generación para amantes de la comida sana, fresca, incluyendo ensaladas, postres y snacks' );
 		if( ! has_post_thumbnail( $post->ID ) ) { 
 			if(  $smof_data['logo'] ) {
 				echo sprintf( '<meta property="og:image" content="%s"/>', $smof_data['logo'] );

@@ -19,6 +19,8 @@
 		echo '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />';
 	}
 	?>
+	<meta name="Description" CONTENT="Vegui, la revolución de la comida saludable, con máquinas expendedoras de última generación para amantes de la comida sana, fresca, incluyendo ensaladas, postres y snacks">
+	<meta name="keywords" content="máquina expendedora, comida saludable, ensaladas, ensalada, quiosko saludable, vegui, vendomática, dispensador, dispensadores, saludables, vegetariano, fresco" />
 	
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
