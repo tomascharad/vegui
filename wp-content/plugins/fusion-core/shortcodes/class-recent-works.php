@@ -371,7 +371,7 @@ class FusionSC_RecentWorks {
 
 		$attr = array();
 
-		$attr['class'] = 'icon link-icon';
+		$attr['class'] = '';
 		
 		$attr['href'] = $this->icon_permalink;
 		
@@ -404,10 +404,6 @@ class FusionSC_RecentWorks {
 	function img_h3_link_attr() {
 
 		$attr = array();
-		
-		$attr['href'] = $this->icon_permalink;
-		
-		$attr['target'] = $this->link_target;
 
 		return $attr;
 
@@ -503,15 +499,16 @@ class FusionSC_RecentWorks {
 		}
 		
 		$terms = '';
-		if( self::$args['layout'] != 'carousel' ) {
-			$terms = sprintf( '<h4>%s</h4>', get_the_term_list( get_the_ID(), 'portfolio_category', '', ', ', '' ) );
-		}
+		// if( self::$args['layout'] != 'carousel' ) {
+		// 	$terms = sprintf( '<h4>%s</h4>', get_the_term_list( get_the_ID(), 'portfolio_category', '', ', ', '' ) );
+		// }
 
 		$image_extras = sprintf( '<div %s><div %s><a %s></a><a %s><img style="display:none;" alt="%s" /></a><h3><a %s>%s</a></h3>%s</div></div>', FusionCore_Plugin::attributes( 'image-extras' ), 
-								 FusionCore_Plugin::attributes( 'image-extras-content' ), FusionCore_Plugin::attributes( 'recentworks-shortcode-img-link-icon' ), 
-							 	 FusionCore_Plugin::attributes( 'recentworks-shortcode-img-zoom-icon', array( 'href' => $full_image[0], 'caption' => get_post_field( 'post_excerpt', get_post_thumbnail_id( $id ) ) ) ), get_post_meta(get_post_thumbnail_id( $id ), '_wp_attachment_image_alt', true), 
-								 FusionCore_Plugin::attributes( 'recentworks-shortcode-img-h3-link' ), get_the_title( $id ),
-								 $terms );	
+			FusionCore_Plugin::attributes( 'image-extras-content' ),
+			FusionCore_Plugin::attributes( 'recentworks-shortcode-img-link-icon' ), 
+			FusionCore_Plugin::attributes( 'recentworks-shortcode-img-zoom-icon', array( 'href' => $full_image[0], 'caption' => get_post_field( 'post_excerpt', get_post_thumbnail_id( $id ) ) ) ), get_post_meta(get_post_thumbnail_id( $id ), '_wp_attachment_image_alt', true), 
+			FusionCore_Plugin::attributes( 'recentworks-shortcode-img-h3-link' ), get_the_title( $id ),
+			$terms );	
 
 		return $image_extras;
 	}
