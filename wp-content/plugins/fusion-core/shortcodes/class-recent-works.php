@@ -493,9 +493,10 @@ class FusionSC_RecentWorks {
 	}
 	
 	function get_image_extras( $id ) {
-		$full_image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' );
+		$attachment_new_id = kd_mfi_get_featured_image_id('featured-image-2', 'avada_portfolio');
+		$full_image = wp_get_attachment_image_src( $attachment_new_id, 'full' );
 		if( get_post_meta( $id, 'pyre_video_url', true ) ) {
-			$full_image[0] = get_post_meta( $id, 'pyre_video_url', true );
+			$full_image[0] = get_post_meta( $attachment_new_id, 'pyre_video_url', true );
 		}
 		
 		$terms = '';
